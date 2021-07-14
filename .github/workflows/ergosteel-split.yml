@@ -28,7 +28,7 @@ jobs:
         # bluemacro_nrf52840
         # nice_nano
         # pca10056 - use this for all other nRF52840 based boards not listed above (needs Arduino_nRF52_Bootloader)
-        compile_with: ['bluemicro_nrf52840']
+        compile_with: ['pca10056']
 
     # you shouldn't need to edit anything below
     steps:
@@ -47,7 +47,6 @@ jobs:
           echo "::set-output name=firmware-here::false"
           fi
       - name: clone BlueMicro_BLE repository
-        if: ${{ steps.job_conditions.outputs.firmware-here == 'false' }}
         run: |
           git clone https://github.com/photomattmills/BlueMicro_BLE.git
       - name: setup job variables
