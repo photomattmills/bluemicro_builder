@@ -25,25 +25,24 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
  */
  std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
      {KEYMAP( /* qwerty */
-         KC_EQL,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_F6,   \
-         KC_TAB,  _______, KC_F12, _______, _______, _______,  _______,  \
-         KC_LCTL,  _______, _______, _______, _______, _______,  _______, \
-         KC_LSFT,  _______, _______, _______, _______, _______,   KC_DEL,  \
-         KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
-         KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
-       )
+       KC_MUTE, KC_6,   KC_7,   KC_8,   KC_9,   KC_0,  KC_MINUS,   \
+       KC_NO,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,  KC_BSLS,  \
+       KC_RBRC, KC_H,   KC_J,   KC_K,   KC_L,   KC_SCOLON,  KC_QUOTE, \
+       KC_NO,   KC_N,   KC_M, KC_COMMA, KC_DOT, KC_SLASH,   KC_LSFT,  \
+       KC_NO,   KC_NO, KC_LEFT,   KC_UP, KC_RIGHT, KC_DOWN, KC_LALT,   \
+       KC_LCTL, KC_LGUI, KC_PGUP, KC_SPACE, KC_ENTER, KC_PGDN, KC_NO \
      )};
 
  void setupKeymap() {
 
      uint32_t layer1[MATRIX_ROWS][MATRIX_COLS] =
      KEYMAP(
-       KC_EQL,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_F6,   \
-       KC_TAB,  _______, KC_F12, _______, _______, _______,  _______,  \
-       KC_LCTL,  _______, _______, _______, _______, _______,  _______, \
-       KC_LSFT,  _______, _______, _______, _______, _______,   KC_DEL,  \
-       KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
-       KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
+       KC_MUTE, KC_6,   KC_7,   KC_8,   KC_9,   KC_0,  KC_MINUS,   \
+       KC_NO,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,  KC_BSLS,  \
+       KC_RBRC, KC_H,   KC_J,   KC_K,   KC_L,   KC_SCOLON,  KC_QUOTE, \
+       KC_NO,   KC_N,   KC_M, KC_COMMA, KC_DOT, KC_SLASH,   KC_LSFT,  \
+       KC_NO,   KC_NO, KC_LEFT,   KC_UP, KC_RIGHT, KC_DOWN, KC_LALT,   \
+       KC_LCTL, KC_LGUI, KC_PGUP, KC_SPACE, KC_ENTER, KC_PGDN, KC_NO \
      );
 
      /*
@@ -66,25 +65,24 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 
  std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
      {KEYMAP( /* qwerty */
-         KC_EQL,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_F6,   \
-         KC_TAB,  _______, KC_F12, _______, _______, _______,  _______,  \
-         KC_LCTL,  _______, _______, _______, _______, _______,  _______, \
-         KC_LSFT,  _______, _______, _______, _______, _______,   KC_DEL,  \
-         KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
-         KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
-       )
+       KC_MUTE, KC_6,   KC_7,   KC_8,   KC_9,   KC_0,  KC_MINUS,   \
+       KC_RBRC,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,  KC_BSLS,  \
+       KC_RBRC, KC_H,   KC_J,   KC_K,   KC_L,   KC_SCOLON,  KC_QUOTE, \
+       KC_NO,   KC_N,   KC_M, KC_COMMA, KC_DOT, KC_SLASH,   KC_LSFT,  \
+       KC_NO,   KC_NO, KC_LEFT,   KC_UP, KC_RIGHT, KC_DOWN, KC_LALT,   \
+       KC_LCTL, KC_LGUI, KC_PGUP, KC_SPACE, KC_ENTER, KC_PGDN, KC_NO \
      )};
 
  void setupKeymap() {
 
      uint32_t layer1[MATRIX_ROWS][MATRIX_COLS] =
      KEYMAP(
-       KC_EQL,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_F6,   \
-       KC_TAB,  _______, KC_F12, _______, _______, _______,  _______,  \
-       KC_LCTL,  _______, _______, _______, _______, _______,  _______, \
-       KC_LSFT,  _______, _______, _______, _______, _______,   KC_DEL,  \
-       KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
-       KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
+       KC_MUTE, KC_6,   KC_7,   KC_8,   KC_9,   KC_0,  KC_MINUS,   \
+       KC_NO,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,  KC_BSLS,  \
+       KC_RBRC, KC_H,   KC_J,   KC_K,   KC_L,   KC_SCOLON,  KC_QUOTE, \
+       KC_NO,   KC_N,   KC_M, KC_COMMA, KC_DOT, KC_SLASH,   KC_LSFT,  \
+       KC_NO,   KC_NO, KC_LEFT,   KC_UP, KC_RIGHT, KC_DOWN, KC_LALT,   \
+       KC_LCTL, KC_LGUI, KC_PGUP, KC_SPACE, KC_ENTER, KC_PGDN, KC_NO \
      );
 
      /*

@@ -25,25 +25,24 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
  */
  std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
      {KEYMAP( /* qwerty */
-         KC_EQL,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_F6,   \
-         KC_TAB,  _______, KC_F12, _______, _______, _______,  _______,  \
-         KC_LCTL,  _______, _______, _______, _______, _______,  _______, \
-         KC_LSFT,  _______, _______, _______, _______, _______,   KC_DEL,  \
-         KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
-         KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
-       )
+       KC_EQL,   KC_1,     KC_2,    KC_3,     KC_4,    KC_5,  KC_6,    \
+       KC_TAB,   KC_Q,     KC_W,    KC_E,     KC_R,    KC_T,  KC_LBRC,  \
+       KC_LCTL,  KC_A,     KC_S,    KC_D,     KC_F,    KC_G,  _______, \
+       KC_LSFT,  KC_Z,     KC_X,    KC_C,     KC_V,    KC_B,  _______,  \
+       KC_ESC,   KC_GRV,   KC_LBRC, KC_LSFT,  KC_LGUI, KC_ENT, _______, \
+       KC_1, 0x81, KC_DEL, KC_BSPC, 0x80, KC_LGUI, KC_LALT \
      )};
 
  void setupKeymap() {
 
      uint32_t layer1[MATRIX_ROWS][MATRIX_COLS] =
      KEYMAP(
-       KC_EQL,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_F6,   \
-       KC_TAB,  _______, KC_F12, _______, _______, _______,  _______,  \
-       KC_LCTL,  _______, _______, _______, _______, _______,  _______, \
-       KC_LSFT,  _______, _______, _______, _______, _______,   KC_DEL,  \
-       KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
-       KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
+       KC_EQL,   KC_1,     KC_2,    KC_3,     KC_4,    KC_5,  KC_6,    \
+       KC_TAB,   KC_Q,     KC_W,    KC_E,     KC_R,    KC_T,  KC_LBRC,  \
+       KC_LCTL,  KC_A,     KC_S,    KC_D,     KC_F,    KC_G,  _______, \
+       KC_LSFT,  KC_Z,     KC_X,    KC_C,     KC_V,    KC_B,  _______,  \
+       KC_ESC,   KC_GRV,   KC_LBRC, KC_LSFT,  KC_LGUI, KC_ENT, _______, \
+       KC_1, 0x81, KC_DEL, KC_BSPC, 0x80, KC_LGUI, KC_LALT \
      );
 
      /*
@@ -66,25 +65,25 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 
  std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
      {KEYMAP( /* qwerty */
-         KC_EQL,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_F6,   \
-         KC_TAB,  _______, KC_F12, _______, _______, _______,  _______,  \
-         KC_LCTL,  _______, _______, _______, _______, _______,  _______, \
-         KC_LSFT,  _______, _______, _______, _______, _______,   KC_DEL,  \
-         KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
-         KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
+       KC_EQL,   KC_1,     KC_2,    KC_3,     KC_4,    KC_5,  KC_6,    \
+       KC_TAB,   KC_Q,     KC_W,    KC_E,     KC_R,    KC_T,  KC_LBRC,  \
+       KC_LCTL,  KC_A,     KC_S,    KC_D,     KC_F,    KC_G,  _______, \
+       KC_LSFT,  KC_Z,     KC_X,    KC_C,     KC_V,    KC_B,  _______,  \
+       KC_ESC,   KC_GRV,   KC_LBRC, KC_LSFT,  KC_LGUI, KC_ENT, _______, \
+       KC_1, 0x81, KC_DEL, KC_BSPC, 0x80, KC_LGUI, KC_LALT \
        )
-     )};
+     };
 
  void setupKeymap() {
 
      uint32_t layer1[MATRIX_ROWS][MATRIX_COLS] =
      KEYMAP(
-       KC_EQL,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_F6,   \
-       KC_TAB,  _______, KC_F12, _______, _______, _______,  _______,  \
-       KC_LCTL,  _______, _______, _______, _______, _______,  _______, \
-       KC_LSFT,  _______, _______, _______, _______, _______,   KC_DEL,  \
-       KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
-       KC_ESC,  KC_GRV,   KC_LBRC, KC_RBRC, KC_LSFT, KC_LGUI,   KC_ENT,  \
+       KC_EQL,   KC_1,     KC_2,    KC_3,     KC_4,    KC_5,  KC_6,    \
+       KC_TAB,   KC_Q,     KC_W,    KC_E,     KC_R,    KC_T,  KC_LBRC,  \
+       KC_LCTL,  KC_A,     KC_S,    KC_D,     KC_F,    KC_G,  _______, \
+       KC_LSFT,  KC_Z,     KC_X,    KC_C,     KC_V,    KC_B,  _______,  \
+       KC_ESC,   KC_GRV,   KC_LBRC, KC_LSFT,  KC_LGUI, KC_ENT, _______, \
+       KC_1, 0x81, KC_DEL, KC_BSPC, 0x80, KC_LGUI, KC_LALT \
      );
 
      /*
