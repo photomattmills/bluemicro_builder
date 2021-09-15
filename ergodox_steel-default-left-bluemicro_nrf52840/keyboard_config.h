@@ -25,29 +25,27 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 #define KEYBOARD_SIDE LEFT
 // CHANGE THIS FOR THE KEYBOARD TO MATCH WHAT IS BEING FLASHED. OPTIONS: LEFT  RIGHT  SINGLE
 
-#define DEVICE_NAME_R                         "ergodox_steel_r"                          /**< Name of device. Will be included in the advertising data. */
-#define DEVICE_NAME_L                         "ergodox_steel_l"                          /**< Name of device. Will be included in the advertising data. */
-#define DEVICE_NAME_M                         "ergodox"                          /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME_R     "ergodox_steel_r"      /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME_L     "ergodox_steel_l"      /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME_M     "ergodox"      /**< Name of device. Will be included in the advertising data. */
 
-#define DEVICE_MODEL                          "ergodox_steel_1"                          /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_MODEL      "ergodox_steel_1"      /**< Name of device. Will be included in the advertising data. */
 
-#define MANUFACTURER_NAME                     "Mills Studio"                      /**< Manufacturer. Will be passed to Device Information Service. */
+#define MANUFACTURER_NAME "Mills Studio"  /**< Manufacturer. Will be passed to Device Information Service. */
 
-
-
-        #define KEYMAP( \
-            K00,   K01,   K02,   K03,   K04,   K05, K06,   \
-            K10,   K11,   K12,   K13,   K14,   K15, K16,   \
-            K20,   K21,   K22,   K23,   K24,   K25, K26,   \
-            K30,   K31,   K32,   K33,   K34,   K35, K36,   \
-            K40,   K41,   K42,   K43,   K44,   K45, K46,   \
-            K50,   K51,   K52,   K53,   K54,   K55, K56    \
-        ) { \
-            { K00,   K01,   K02,   K03,   K04,   K05, K06 }, \
-            { K10,   K11,   K12,   K13,   K14,   K15, K16 }, \
-            { K20,   K21,   K22,   K23,   K24,   K25, K26 }, \
-            { K30,   K31,   K32,   K33,   K34,   K35, K36 }, \
-            { K40,   K41,   K42,   K43,   K44,   K45, K46 }, \
-            { K50,   K51,   K52,   K53,   K54,   K55, K56 }, \
-        }
+#define KEYMAP( \
+    K00, K01, K02, K03, K04, K05, K06, \
+    K10, K11, K12, K13, K14, K15, K16, \
+    K20, K21, K22, K23, K24, K25, K26, \
+    K30, K31, K32, K33, K34, K35, K36, \
+    K40, K41, K42, K43, K44, K45, K46, \
+    K50, K51, K52, K53, K54, K55, K56  \
+) { \
+    { K00, K01, K02, K03, K04, K05, K06   }, \
+    { K10, K11, K12, K13, K14, K15, K16   }, \
+    { K20, K21, K22, K23, K24, K25, K26   }, \
+    { K30, K31, K32, K33, K34, K35, K36   }, \
+    { K40, K41, K42, K43, K44, K45, K46   }, \
+    { K50, K51, K52, K53, K54, K55, K56   } \
+}
 #endif /* KEYBOARD_CONFIG_H */
