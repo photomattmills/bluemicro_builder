@@ -54,9 +54,6 @@ jobs:
         run: |
           echo "::set-output name=firmware-name::${{ matrix.keyboard }}-${{ matrix.keymap }}-${{ matrix.keyboard_config }}-${{ matrix.compile_with }}"
           echo "::set-output name=hardware-config::$(find BlueMicro_BLE/firmware/keyboards/${{ matrix.keyboard }}/hardware/ -name hardware_config.h | grep ${{ matrix.hardware_config }} )"
-      - name: create firmware folder
-        run: |
-          mkdir ${{ steps.job_variables.outputs.firmware-name }}
       - name: copy main firmware files
         run: |
           cp BlueMicro_BLE/firmware/*.cpp ${{ steps.job_variables.outputs.firmware-name }}
