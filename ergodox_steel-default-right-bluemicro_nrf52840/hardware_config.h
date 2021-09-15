@@ -28,24 +28,23 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 
 #if KEYBOARD_SIDE == LEFT
 
-  #define MATRIX_ROW_PINS { 13, 12, 11, 10, 9, 6 }
-
-  #define MATRIX_COL_PINS { 14, 15, 16, 17, 25, 24, 1 }
+  #define MATRIX_ROW_PINS { 22, 23, 5, 6, 9, 10 }
+  #define MATRIX_COL_PINS { 5, 30, 29, 13, 15, 24, 25 }
 
 #else
 
-#define MATRIX_ROW_PINS { 13, 12, 11, 10, 9, 6 }
-#define MATRIX_COL_PINS { 14, 15, 16, 17, 25, 24, 1 }
+  #define MATRIX_ROW_PINS { 7, 26, 27, 6, 8, 41 }
+  #define MATRIX_COL_PINS { 24, 15, 13, 28, 30, 5, 4 }
 
 #endif
 
-#define BATTERY_TYPE BATT_LIPO
-#define VBAT_PIN 29
+// #define BATTERY_TYPE BATT_LIPO
+// #define VBAT_PIN 29
 
 #define UNUSED_PINS {}
 
 /* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION ROW2COL
+#define DIODE_DIRECTION COL2ROW
 
 
 #endif /* HARDWARE_CONFIG_H */
