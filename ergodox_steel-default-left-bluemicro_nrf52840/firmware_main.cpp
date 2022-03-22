@@ -154,10 +154,12 @@ void resetConfig()
   keyboardconfig.BLEProfileEdiv[0] = 0xFFFF;
   keyboardconfig.BLEProfileEdiv[1] = 0xFFFF;
   keyboardconfig.BLEProfileEdiv[2] = 0xFFFF;
+  memset(keyboardconfig.BLEProfileAddr[0], 0, 6);
+  memset(keyboardconfig.BLEProfileAddr[1], 0, 6);
+  memset(keyboardconfig.BLEProfileAddr[2], 0, 6);
   strcpy(keyboardconfig.BLEProfileName[0], "unpaired");
   strcpy(keyboardconfig.BLEProfileName[1], "unpaired");
   strcpy(keyboardconfig.BLEProfileName[2], "unpaired");
-
 
 }
 
@@ -181,7 +183,7 @@ void saveConfig()
 /**************************************************************************************************************************/
 // cppcheck-suppress unusedFunction
 void setup() {
-
+  usb_setup(); // does nothing for 832 - see usb.cpp // must be first in setup due to USB setup timing.
   setupGpio();                                                                // checks that NFC functions on GPIOs are disabled.
   setupWDT();
   #ifdef BLUEMICRO_CONFIGURED_DISPLAY
@@ -222,9 +224,9 @@ void setup() {
 
   keyscantimer.begin(keyboardconfig.matrixscaninterval, keyscantimer_callback);
   //batterytimer.begin(keyboardconfig.batteryinterval, batterytimer_callback);
+  
+  
   bt_setup(keyboardconfig.BLEProfile);
-  usb_setup(); // does nothing for 832 - see usb.cpp
-
   // Set up keyboard matrix and start advertising
   setupKeymap(); // this is where we can change the callback for our LEDs...
   setupMatrix();
@@ -752,13 +754,37 @@ void process_keyboard_function(uint16_t keycode)
       sprintf(buffer,"cccd\t %i\t %s",keyboardstate.rssi_cccd, keyboardstate.peer_name_cccd);addStringToQueue(buffer); addKeycodeToQueue(KC_ENTER);
        sprintf(buffer,  "Profile 1:   %s", keyboardconfig.BLEProfileName[0]);
       addStringToQueue(buffer);
+      sprintf(buffer,  "Profile 1: %02X:%02X:%02X:%02X:%02X:%02X - %s", keyboardconfig.BLEProfileAddr[0][5],
+                                                                        keyboardconfig.BLEProfileAddr[0][4],
+                                                                        keyboardconfig.BLEProfileAddr[0][3],
+                                                                        keyboardconfig.BLEProfileAddr[0][2],
+                                                                        keyboardconfig.BLEProfileAddr[0][1],
+                                                                        keyboardconfig.BLEProfileAddr[0][0],
+                                                                        keyboardconfig.BLEProfileName[0]);
+      addStringToQueue(buffer);
       if (keyboardconfig.BLEProfile == 0) addStringToQueue(" (active)");
       addKeycodeToQueue(KC_ENTER);
       sprintf(buffer,  "Profile 2:   %s", keyboardconfig.BLEProfileName[1]);
       addStringToQueue(buffer);
+      sprintf(buffer,  "Profile 2: %02X:%02X:%02X:%02X:%02X:%02X - %s", keyboardconfig.BLEProfileAddr[1][5],
+                                                                        keyboardconfig.BLEProfileAddr[1][4],
+                                                                        keyboardconfig.BLEProfileAddr[1][3],
+                                                                        keyboardconfig.BLEProfileAddr[1][2],
+                                                                        keyboardconfig.BLEProfileAddr[1][1],
+                                                                        keyboardconfig.BLEProfileAddr[1][0],
+                                                                        keyboardconfig.BLEProfileName[1]);
+      addStringToQueue(buffer);
       if (keyboardconfig.BLEProfile == 1) addStringToQueue(" (active)");
       addKeycodeToQueue(KC_ENTER);
       sprintf(buffer,  "Profile 3:   %s", keyboardconfig.BLEProfileName[2]);
+      addStringToQueue(buffer);
+      sprintf(buffer,  "Profile 3: %02X:%02X:%02X:%02X:%02X:%02X - %s", keyboardconfig.BLEProfileAddr[2][5],
+                                                                        keyboardconfig.BLEProfileAddr[2][4],
+                                                                        keyboardconfig.BLEProfileAddr[2][3],
+                                                                        keyboardconfig.BLEProfileAddr[2][2],
+                                                                        keyboardconfig.BLEProfileAddr[2][1],
+                                                                        keyboardconfig.BLEProfileAddr[2][0],
+                                                                        keyboardconfig.BLEProfileName[2]);
       addStringToQueue(buffer);
       if (keyboardconfig.BLEProfile == 2) addStringToQueue(" (active)");
       addKeycodeToQueue(KC_ENTER);
@@ -848,42 +874,27 @@ void process_keyboard_function(uint16_t keycode)
     case BLEPROFILE_1:
      // if (keyboardstate.connectionState != CONNECTION_USB) // reseting/rebooting KB when BLE Profile switching on USB would be ennoying...
         {
-        #ifdef ARDUINO_NRF52_COMMUNITY
           keyboardconfig.BLEProfile = 0;
           keyboardstate.save2flash = true;
           keyboardstate.needReset = true;
-        #endif
-        #ifdef ARDUINO_NRF52_ADAFRUIT
-          ; // do nothing since the Adafruit BSP doesn't support ediv.
-        #endif
       }
     break;
 
     case BLEPROFILE_2:
      // if (keyboardstate.connectionState != CONNECTION_USB) // reseting/rebooting KB when BLE Profile switching on USB would be ennoying...
       {
-        #ifdef ARDUINO_NRF52_COMMUNITY
           keyboardconfig.BLEProfile = 1;
           keyboardstate.save2flash = true;
           keyboardstate.needReset = true;
-        #endif
-        #ifdef ARDUINO_NRF52_ADAFRUIT
-          ; // do nothing since the Adafruit BSP doesn't support ediv.
-        #endif
       }
     break;
 
     case BLEPROFILE_3:
     //  if (keyboardstate.connectionState != CONNECTION_USB) // reseting/rebooting KB when BLE Profile switching on USB would be ennoying...
       {
-        #ifdef ARDUINO_NRF52_COMMUNITY
           keyboardconfig.BLEProfile = 2;
           keyboardstate.save2flash = true;
           keyboardstate.needReset = true;
-        #endif
-        #ifdef ARDUINO_NRF52_ADAFRUIT
-          ; // do nothing since the Adafruit BSP doesn't support ediv.
-        #endif
       }
     break;
 
@@ -1067,7 +1078,7 @@ void keyscantimer_callback(TimerHandle_t _handle) {
     sendKeyPresses();  
   #endif
    keyboardstate.lastuseractiontime = max(KeyScanner::getLastPressed(),keyboardstate.lastuseractiontime); // use the latest time to check for sleep...
-   unsigned long timesincelastkeypress = keyboardstate.timestamp - keyboardstate.lastuseractiontime;
+   unsigned long timesincelastkeypress =  (keyboardstate.timestamp > keyboardstate.lastuseractiontime) ? keyboardstate.timestamp - keyboardstate.lastuseractiontime : 0;
 
   #if SLEEP_ACTIVE == 1
     switch (keyboardstate.connectionState)
@@ -1197,11 +1208,20 @@ void loop() {  // has task priority TASK_PRIO_LOW
   if (keyboardstate.needUnpair)
   {
     bt_disconnect();
-    char filename[32] = { 0 };
+    char filename[33] = { 0 };
     sprintf(filename, "/adafruit/bond_prph/%04x", keyboardconfig.BLEProfileEdiv[keyboardconfig.BLEProfile]);
     InternalFS.remove(filename);
 
+    sprintf(filename, "/adafruit/bond_prph/%02X%02X%02X%02X%02X%02X", keyboardconfig.BLEProfileAddr[keyboardconfig.BLEProfile][0],
+                                                                      keyboardconfig.BLEProfileAddr[keyboardconfig.BLEProfile][1],
+                                                                      keyboardconfig.BLEProfileAddr[keyboardconfig.BLEProfile][2],
+                                                                      keyboardconfig.BLEProfileAddr[keyboardconfig.BLEProfile][3],
+                                                                      keyboardconfig.BLEProfileAddr[keyboardconfig.BLEProfile][4],
+                                                                      keyboardconfig.BLEProfileAddr[keyboardconfig.BLEProfile][5]);
+     InternalFS.remove(filename);
+
     keyboardconfig.BLEProfileEdiv[keyboardconfig.BLEProfile] = 0xFFFF;
+    memset(keyboardconfig.BLEProfileAddr[keyboardconfig.BLEProfile], 0, 6);
     strcpy(keyboardconfig.BLEProfileName[keyboardconfig.BLEProfile], "unpaired");
     keyboardstate.save2flash = true;
     keyboardstate.needReset = true;
