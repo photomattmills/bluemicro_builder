@@ -110,7 +110,7 @@ jobs:
           python $HOME/$BSP_PATH/$BSP_VERSION/tools/uf2conv/uf2conv.py ./${{ steps.job_variables.outputs.firmware-name }}/build/${{ steps.job_variables.outputs.firmware-name }}.ino.hex -c -f 0xADA52840 -o ./${{ steps.job_variables.outputs.firmware-name }}/build/${{ steps.job_variables.outputs.firmware-name }}.ino.uf2
       - name: check back in the changes to this repo
         run: |
-          ls -l
+          ls -l ./${{ steps.job_variables.outputs.firmware-name }}/build/
           git config --global user.name 'gh-actions'
           git config --global user.email 'gh-actions@noreply.github.com'
           git add .
