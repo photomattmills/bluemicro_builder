@@ -5585,60 +5585,60 @@ Linker script and memory map
                 0x0000000000042678       0x1a /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/KeyScanner.cpp.o
  *fill*         0x0000000000042692        0x2 
  .rodata._Z8bt_setuph.str1.4
-                0x0000000000042694       0x30 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/bluetooth.cpp.o
- .rodata        0x00000000000426c4        0x8 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/bluetooth.cpp.o
+                0x0000000000042694       0x34 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/bluetooth.cpp.o
+ .rodata        0x00000000000426c8        0x8 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/bluetooth.cpp.o
  .rodata._Z25matrix_key_init_separatorb.str1.4
-                0x00000000000426cc       0x42 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
- *fill*         0x000000000004270e        0x2 
+                0x00000000000426d0       0x42 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
+ *fill*         0x0000000000042712        0x2 
  .rodata._Z8helplinev.str1.4
-                0x0000000000042710       0x35 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
+                0x0000000000042714       0x35 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
                                          0x39 (size before relaxing)
- *fill*         0x0000000000042745        0x3 
+ *fill*         0x0000000000042749        0x3 
  .rodata._Z14matrix_key_endb.str1.4
-                0x0000000000042748        0x5 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
- *fill*         0x000000000004274d        0x3 
+                0x000000000004274c        0x5 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
+ *fill*         0x0000000000042751        0x3 
  .rodata._Z10gpiotesterv.str1.4
-                0x0000000000042750       0xd2 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
+                0x0000000000042754       0xd2 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
                                          0xd6 (size before relaxing)
  .rodata._ZNSt6vectorIhSaIhEE17_M_realloc_insertIJRKhEEEvN9__gnu_cxx17__normal_iteratorIPhS1_EEDpOT_.str1.4
-                0x0000000000042822       0x1a /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
- *fill*         0x0000000000042822        0x2 
+                0x0000000000042826       0x1a /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
+ *fill*         0x0000000000042826        0x2 
  .rodata._Z15matrix_key_initb.str1.4
-                0x0000000000042824      0x2cc /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
+                0x0000000000042828      0x2cc /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
  .rodata._Z15matrix_key_testb.str1.4
-                0x0000000000042af0       0x16 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
- *fill*         0x0000000000042b06        0x2 
+                0x0000000000042af4       0x16 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
+ *fill*         0x0000000000042b0a        0x2 
  .rodata._Z12handleSerialv.str1.4
-                0x0000000000042b08      0x590 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
+                0x0000000000042b0c      0x594 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/debug_cli.cpp.o
  .rodata._Z11resetConfigv.str1.4
-                0x0000000000043098        0x9 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
+                0x00000000000430a0        0x9 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
  .rodata._ZNSt6vectorItSaItEE17_M_realloc_insertIJRKtEEEvN9__gnu_cxx17__normal_iteratorIPtS1_EEDpOT_.str1.4
-                0x00000000000430a1       0x1a /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
- *fill*         0x00000000000430a1        0x3 
+                0x00000000000430a9       0x1a /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
+ *fill*         0x00000000000430a9        0x3 
  .rodata._Z19process_user_macrost.str1.4
-                0x00000000000430a4       0x10 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
+                0x00000000000430ac       0x10 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
  .rodata._Z25process_keyboard_functiont.str1.4
-                0x00000000000430b4      0x3cb /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
-                                        0x51f (size before relaxing)
- *fill*         0x000000000004347f        0x1 
+                0x00000000000430bc      0x3cf /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
+                                        0x527 (size before relaxing)
+ *fill*         0x000000000004348b        0x1 
  .rodata._Z10saveConfigv.str1.4
-                0x0000000000043480        0xa /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
- *fill*         0x000000000004348a        0x2 
+                0x000000000004348c        0xa /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
+ *fill*         0x0000000000043496        0x2 
  .rodata.setup.str1.4
-                0x000000000004348c        0x3 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
+                0x0000000000043498        0x3 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
                                         0x1d7 (size before relaxing)
- *fill*         0x000000000004348f        0x1 
+ *fill*         0x000000000004349b        0x1 
  .rodata.loop.str1.4
-                0x0000000000043490       0x49 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
- *fill*         0x00000000000434d9        0x3 
- .rodata        0x00000000000434dc        0x6 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
- *fill*         0x00000000000434e2        0xe 
+                0x000000000004349c       0x49 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
+ *fill*         0x00000000000434e5        0x3 
+ .rodata        0x00000000000434e8        0x6 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
+ *fill*         0x00000000000434ee        0x2 
  .rodata._ZZ21nrfx_coredep_delay_usE18delay_machine_code
                 0x00000000000434f0        0x6 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/firmware_main.cpp.o
  *fill*         0x00000000000434f6        0x2 
  .rodata        0x00000000000434f8       0xa8 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/keymap.cpp.o
  .rodata._Z9usb_setupv.str1.4
-                0x00000000000435a0       0x20 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/usb.cpp.o
+                0x00000000000435a0       0x24 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/usb.cpp.o
  .rodata._ZL15desc_hid_report
                 0x00000000000435a0       0xa9 /tmp/arduino-sketch-B5154504879EB0EBC55E38B06752D24C/sketch/usb.cpp.o
  *fill*         0x0000000000043649        0x3 

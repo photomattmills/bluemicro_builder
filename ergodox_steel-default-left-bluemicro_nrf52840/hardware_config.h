@@ -33,8 +33,8 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 
 #else
 
-#define MATRIX_ROW_PINS { 22, 23, 5, 6, 9, 10 }
-#define MATRIX_COL_PINS {  15, 16, 17, 25, 24, 1, 0 }
+#define MATRIX_ROW_PINS { 13, 12, 11, 10, 9, 6 }
+#define MATRIX_COL_PINS { 14, 15, 16, 17, 25, 24, 1 }
 
 #endif
 

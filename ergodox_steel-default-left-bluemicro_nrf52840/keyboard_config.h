@@ -26,7 +26,7 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 // CHANGE THIS FOR THE KEYBOARD TO MATCH WHAT IS BEING FLASHED. OPTIONS: LEFT  RIGHT  SINGLE
 
 #define DEVICE_NAME_R     "ergodox_steel_r"      /**< Name of device. Will be included in the advertising data. */
-#define DEVICE_NAME_L     "ergodox_steel_l"      /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME_L     "ergodox_steel_new_l"      /**< Name of device. Will be included in the advertising data. */
 #define DEVICE_NAME_M     "ergodox"      /**< Name of device. Will be included in the advertising data. */
 
 #define DEVICE_MODEL      "ergodox_steel_1"      /**< Name of device. Will be included in the advertising data. */
